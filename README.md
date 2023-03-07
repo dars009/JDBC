@@ -1,4 +1,4 @@
-# JDBC - Java Database Connectivity
+## JDBC - Java Database Connectivity
 
 MySql Download Link : https://dev.mysql.com/downloads/installer/
 
@@ -8,13 +8,13 @@ Eclipse Download Link : https://www.eclipse.org/downloads/download.php?file=/tec
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Introduction 
+## Introduction 
 
 •	JDBC is used to interact with various type of Database such as Oracle, MS Access, My SQL and SQL Server. 
 •	JDBC can also be defined as the platform-independent interface between a relational database and Java programming. 
 •	It allows java program to execute SQL statement and retrieve result from database.
 
-# JDBC Architecture
+## JDBC Architecture
 
 ![image](https://user-images.githubusercontent.com/22477406/223450119-b5a059f5-18a7-4532-a736-60768b275a00.png)
 
