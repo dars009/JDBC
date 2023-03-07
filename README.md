@@ -20,9 +20,14 @@
 ![image](https://user-images.githubusercontent.com/22477406/223450119-b5a059f5-18a7-4532-a736-60768b275a00.png)
 
 ## MySQL Queries
-• Drop (Delete) the database 
+• Drop (Delete) the database if exist 
 ```bash
-  DROP DATABASE employee;
+  DROP DATABASE IF EXISTS employee;
 ```
+• Create new schema/database if not exist 
+```bash
+  CREATE DATABASE IF NOT EXISTS employee;
+```
+
 
 
