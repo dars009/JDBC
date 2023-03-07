@@ -16,7 +16,8 @@
 •	It allows java program to execute SQL statement and retrieve result from database. <br>
 
 ## JDBC Architecture
+<center>
 ![image](https://user-images.githubusercontent.com/22477406/223450119-b5a059f5-18a7-4532-a736-60768b275a00.png)
-
+</center>
 
 
