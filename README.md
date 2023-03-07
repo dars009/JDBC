@@ -4,6 +4,7 @@
 • [Pre-requisite](#pre-requisite)
 <br> • [Introduction](#introduction)
 <br> • [JDBC Architecture](#jdbc-architecture)
+<br> • [MySQL Queries](#mysql-queries)
 
 ## Pre-requisite
 • [MySql Download](https://dev.mysql.com/downloads/installer/)
@@ -18,5 +19,10 @@
 ## JDBC Architecture
 ![image](https://user-images.githubusercontent.com/22477406/223450119-b5a059f5-18a7-4532-a736-60768b275a00.png)
 
+## MySQL Queries
+• Drop (Delete) the database 
+```bash
+  DROP DATABASE employee;
+```
 
 
