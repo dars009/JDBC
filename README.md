@@ -128,11 +128,11 @@ ResultSet executeQuery(String)
 int executeUpdate(String)
 boolean execute(String)
 ```
-• The executeQuery()method can be used to submit the selected SQL statement to the SQL Engine.
+• The ```executeQuery()``` method can be used to submit the selected SQL statement to the SQL Engine.
 <br> • This method returns the Resultset object which contains the number of records returned by the given selected SQL statement.
-<br> • The executeUpdate() method can be used to submit insert, update, and delete SQL statement to SQL Engine.
+<br> • The ```executeUpdate()``` method can be used to submit insert, update, and delete SQL statement to SQL Engine.
 <br> • This method returns the integer number which represents the number of record affected by the given SQL statement.
-<br> • The execute() method can be used to submit insert, update, delete SQL statement to SQL Engine.
+<br> • The ```execute()``` method can be used to submit insert, update, delete SQL statement to SQL Engine.
 <br> • This method returns the Boolean value which represents whether the given operation is insert/update/delete (false) OR Fetch (true).
 <br> • Using one statement object, you can submit one or more SQL statements
 <br> • When you submit the SQL statement to SQL Engine using statement object, the SQL statement will be compiled and executed every time.
