@@ -5,7 +5,9 @@
 <br> • [Introduction](#introduction)
 <br> • [JDBC Architecture](#jdbc-architecture)
 <br> • [MySQL Queries](#mysql-queries)
-<br> • [Steps to write a JDBC program](steps-to-write-a-jdbc-program)
+<br> • [Steps to write a JDBC program](#steps-to-write-a-jdbc-program)
+<br> • [Types of JDBC statement](#types-of-jdbc-statement)
+<br> • [Statement](#statement)
 
 ## Pre-requisite
 • [MySql Download](https://dev.mysql.com/downloads/installer/)
@@ -63,12 +65,12 @@ SHOW CREATE TABLE products \G
 ```bash
 INSERT INTO products VALUES (1001, 'PEN', 'Pen Red', 5000, 1.23);
 ```
-• Insert multiple rows in one command
+• Insert multiple rows in one command <br>
 • Inserting NULL to the auto_increment column results in max_value + 1
 ```bash
 INSERT INTO products VALUES (NULL, 'PEN', 'Pen Blue', 8000, 1.25),(NULL, 'PEN', 'Pen Black', 2000, 1.25);
 ```
-• Insert value to selected columns
+• Insert value to selected columns <br>
 • Missing value for the auto_increment column also results in max_value + 1 
 ```bash
 INSERT INTO products (productCode, name, quantity, price) 
@@ -105,3 +107,29 @@ Step 4: Prepare the Required SQL statement <br>
 Step 5: Submit the SQL statement to Database <br>
 Step 6: Process the Results <br>
 Step 7: Release the Resources <br>
+
+## Types of JDBC statement
+• There are three types of JDBC statements.
+<br> 1) Statement 
+<br> 2) PreparedStatement
+<br> 3) CallableStatement
+
+## Statement
+• Statement is an interface available in java.sql package
+<br> • The statement object can be created using one of the following methods of connection interface:
+<br> • Statement createStatement();
+<br> • Statement createStatement(int,int);
+<br> • Statement createStatement(int,int,int);
+<br> • Once the statement object is created, you can call one of the following methods of statement interface:
+<br> • ResultSet executeQuery(String)
+<br> • int executeUpdate(String)
+<br> • boolean execute(String)
+<br> • The executeQuery()method can be used to submit the selected SQL statement to the SQL Engine.
+<br> • This method returns the Resultset object which contains the number of records returned by the given selected SQL statement.
+<br> • The executeUpdate() method can be used to submit insert, update, and delete SQL statement to SQL Engine.
+<br> • This method returns the integer number which represents the number of record affected by the given SQL statement.
+<br> • The execute() method can be used to submit insert, update, delete SQL statement to SQL Engine.
+<br> • This method returns the Boolean value which represents whether the given operation is insert/update/delete (false) OR Fetch (true).
+<br> • Using one statement object, you can submit one or more SQL statements
+<br> • When you submit the SQL statement to SQL Engine using statement object, the SQL statement will be compiled and executed every time.
+
