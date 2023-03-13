@@ -137,3 +137,22 @@ boolean execute(String)
 <br> • Using one statement object, you can submit one or more SQL statements
 <br> • When you submit the SQL statement to SQL Engine using statement object, the SQL statement will be compiled and executed every time.
 
+## PreparedStatement
+• PreparedStatement is an interface available in ```java.sql``` package and it extends the Statement interface.
+<br> • The PreparedStatement object can be created using one of the following methods of connection interface:
+```bash
+PreparedStatement (String);
+PreparedStatement (String, int, int);
+PreparedStatement(String,int,int,int);
+```
+• Once the preparedStatement object is created, you can call one of the following methods of preparedStatement interface:
+```bash
+ResultSet executeQuery()
+int executeUpdate()
+boolean execute()
+```
+• Using one preparedStatement object, you can submit only one type of SQL statement.
+<br> • When you submit the SQL statement to SQL Engine using preparedStatement object, the SQL statement will be compiled only once the first time, 
+and will be executed every time without compilation.
+<br> • PreparedStatement is also a sub interface of Statement. So, we pass (con,ps1,rs) in the cleanup method of DBUtil class.
+<br> • Where con is Connection object, rs is a ResultSet, ps1 is a Statement
