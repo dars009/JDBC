@@ -117,13 +117,17 @@ Step 7: Release the Resources <br>
 ## Statement
 • Statement is an interface available in java.sql package
 <br> • The statement object can be created using one of the following methods of connection interface:
-<br> • Statement createStatement();
-<br> • Statement createStatement(int,int);
-<br> • Statement createStatement(int,int,int);
+```bash
+Statement createStatement();
+Statement createStatement(int,int);
+Statement createStatement(int,int,int);
+```
 <br> • Once the statement object is created, you can call one of the following methods of statement interface:
-<br> • ResultSet executeQuery(String)
-<br> • int executeUpdate(String)
-<br> • boolean execute(String)
+```bash
+ResultSet executeQuery(String)
+int executeUpdate(String)
+boolean execute(String)
+```
 <br> • The executeQuery()method can be used to submit the selected SQL statement to the SQL Engine.
 <br> • This method returns the Resultset object which contains the number of records returned by the given selected SQL statement.
 <br> • The executeUpdate() method can be used to submit insert, update, and delete SQL statement to SQL Engine.
