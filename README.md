@@ -8,6 +8,7 @@
 <br> • [Steps to write a JDBC program](#steps-to-write-a-jdbc-program)
 <br> • [Types of JDBC statement](#types-of-jdbc-statement)
 <br> • [Statement](#statement)
+<br> • [PreparedStatement](#preparedstatement)
 
 ## Pre-requisite
 • [MySql Download](https://dev.mysql.com/downloads/installer/)
