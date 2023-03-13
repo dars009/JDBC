@@ -122,13 +122,13 @@ Statement createStatement();
 Statement createStatement(int,int);
 Statement createStatement(int,int,int);
 ```
-<br> • Once the statement object is created, you can call one of the following methods of statement interface:
+• Once the statement object is created, you can call one of the following methods of statement interface:
 ```bash
 ResultSet executeQuery(String)
 int executeUpdate(String)
 boolean execute(String)
 ```
-<br> • The executeQuery()method can be used to submit the selected SQL statement to the SQL Engine.
+• The executeQuery()method can be used to submit the selected SQL statement to the SQL Engine.
 <br> • This method returns the Resultset object which contains the number of records returned by the given selected SQL statement.
 <br> • The executeUpdate() method can be used to submit insert, update, and delete SQL statement to SQL Engine.
 <br> • This method returns the integer number which represents the number of record affected by the given SQL statement.
