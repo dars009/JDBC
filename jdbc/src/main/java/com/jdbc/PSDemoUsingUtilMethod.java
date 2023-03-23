@@ -1,29 +1,33 @@
 package com.jdbc;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
-import com.jdbc.utils.DBUtil;
+import com.pojo.EmployeeDetails;
 
 public class PSDemoUsingUtilMethod {
 
 	public static void main(String[] args) {
 
-		Connection con = DBUtil.getMySQLConnection();
-		try {
-			PreparedStatement ps = con
-					.prepareStatement("SELECT * FROM employee.employeedetails where empid= ? AND empname = ? ");
-			ps.setInt(1, 1);
-			ps.setString(2, "Ram");
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				System.out.println(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
-			}
+		CRUDDemo cd = new CRUDDemo();
+		// Read Employee table
+		System.out.println("-----------READ Operation------------");
+		//cd.readEmployee();
+		
+		// Insert Employee
+		System.out.println("-----------Write Operation------------");
+		EmployeeDetails emp = new EmployeeDetails();
+		emp.setEmpid(12);
+		emp.setEmpname("abcd");
+		emp.setEmpcity("Mumbai");
+		//cd.createEmployee(emp);
 
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+		System.out.println("-----------Update Operation------------");
+		EmployeeDetails empU = new EmployeeDetails();
+		empU.setEmpid(14);
+		empU.setEmpname("Updated EMployee");
+		//cd.updateEmployee(empU);
+		
+		
+		cd.deleteEmployee(4);
+		
+		
 	}
 }
