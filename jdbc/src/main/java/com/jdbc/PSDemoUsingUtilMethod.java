@@ -7,6 +7,8 @@ public class PSDemoUsingUtilMethod {
 	public static void main(String[] args) {
 
 		CRUDDemo cd = new CRUDDemo();
+		
+		System.out.println(cd.getTotalDataCount());
 		// Read Employee table
 		System.out.println("-----------READ Operation------------");
 		//cd.readEmployee();
@@ -27,6 +29,9 @@ public class PSDemoUsingUtilMethod {
 		
 		
 		cd.deleteEmployee(4);
+		
+		
+		
 		
 		
 	}

@@ -9,6 +9,23 @@ import com.jdbc.utils.DBUtil;
 import com.pojo.EmployeeDetails;
 
 public class CRUDDemo {
+	
+	public int getTotalDataCount() {
+		Connection con = DBUtil.getMySQLConnection();
+		int count = 0;
+		try {
+			PreparedStatement ps = con.prepareStatement("SELECT COUNT(empid) as totalEmployee FROM employee.employeedetails WHERE 1=1;");
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				count = rs.getInt(1);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	
+		return count; 
+	}
 
 	public void readEmployee() {
 		Connection con = DBUtil.getMySQLConnection();
