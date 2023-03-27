@@ -13,7 +13,8 @@ public class ProcedureUtil {
 			Connection con = DBUtil.getMySQLConnection();
 			try {
 				CallableStatement cs = con.prepareCall("call employee.update_city();");
-				cs.execute();
+				boolean b = cs.execute();
+				System.out.println(b);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
